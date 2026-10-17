@@ -108,7 +108,10 @@ final class AppModel: ObservableObject {
     func launch() {
         guard setupDone else { status = .notSetUp; return }
         if watchingSince == nil { watchingSince = Date() }
-        if defaults.bool(forKey: "launchAtLoginWanted") && SMAppService.mainApp.status == .notRegistered {
+        // An app that was never registered reports .notFound, not .notRegistered.
+        // .requiresApproval means the user switched it off in System Settings: leave that alone.
+        let login = SMAppService.mainApp.status
+        if defaults.bool(forKey: "launchAtLoginWanted") && (login == .notRegistered || login == .notFound) {
             setLaunchAtLogin(true)
         }
         restart()
@@ -230,7 +233,7 @@ final class AppModel: ObservableObject {
         do {
             if on { try SMAppService.mainApp.register() } else { try SMAppService.mainApp.unregister() }
         } catch {
-            NSLog("Launch at login: \(error.localizedDescription)")
+            record([ActivityEntry(kind: .warning, title: "Open at login", detail: "Couldn't \(on ? "turn on" : "turn off"): \(error.localizedDescription)")])
         }
         refreshLoginStatus()
     }
