@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Automatic HEIC to JPEG</string>
+	<key>CFBundleExecutable</key>
+	<string>Automatic HEIC to JPEG</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.rsmith4321.automatic-heic-to-jpeg</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Automatic HEIC to JPEG</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.photography</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>AirDrops are moved to the folder you chose on your Desktop.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>AirDrops are moved to the folder you chose in Documents.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>AirDrop saves into Downloads. The app moves files that arrived by AirDrop and converts HEIC photos to JPEG. Nothing leaves your Mac.</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>AirDrops are moved to the folder you chose on this drive.</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>AirDrops are moved to the folder you chose on this network drive.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2026 Ryan Smith. MIT License.</string>
+</dict>
+</plist>
